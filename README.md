@@ -3,8 +3,6 @@
 
 # Preliminary design of Smart Home system with LoPy4 and Raspberry Pi 4
 
-Zhicheng Wang (zw222bc)
-
 ## Project Overview
 
 Smart Home is one of the most popular Internet of Things (IoT) applications and is closest to our daily life. This project is a preliminary design of Smart Home using Raspberry Pi 4 as a Smart Home Hub and lopy4 as an edge device with different sensors. To put the control locally and privacy first, this Smart Home system deploys [Home Assistant](https://www.home-assistant.io/) Operating System on Raspberry Pi 4 and uses MQTT as “Internet of Things” connectivity protocol by WiFi. The project will mainly present the room temperature and humidity display and the automatic night lighting function.
