@@ -1,0 +1,30 @@
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+mqtt:
+  broker: 192.168.0.142
+
+sensor:
+  - platform: mqtt
+    name: "Room Light"
+    state_topic: "home-assistant/Light"
+  
+  - platform: mqtt
+    name: "Bedroom Door"
+    state_topic: "home-assistant/Door"
+
+  - platform: dht
+    sensor: DHT11
+    pin: 4
+    monitored_conditions:
+      - temperature
+      - humidity  
